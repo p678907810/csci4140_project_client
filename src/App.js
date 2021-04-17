@@ -1,4 +1,5 @@
 import React, {Component,Fragment,useEffect} from 'react';
+import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 //import './App.css';
 import { useDispatch } from 'react-redux';
@@ -10,6 +11,8 @@ import About from './Components/About';
 import Contact from './Components/Contact'
 import NavBar from './Components/Navbar';
 import MakePlaylist from './Components/MakePlaylist' 
+import Player from './Components/Player'
+
 const App = () => {
     const dispatch = useDispatch();
     useEffect(() => {
@@ -20,8 +23,12 @@ const App = () => {
         <Fragment>
             <NavBar />
             <Route exact path ="/" render={()=>(
-            <Welcome name="Vtuber Music" />
+              <Fragment>
+                <Welcome name="Vtuber Music" />
+                <Player />
+              </Fragment>
             )} />
+            
             <Switch>
                 <Route exact path="/aboutus" component={About} />
                 <Route exact path="/contactus" component={Contact} />
