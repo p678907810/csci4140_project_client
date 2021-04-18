@@ -12,6 +12,10 @@ import Contact from './Components/Contact'
 import NavBar from './Components/Navbar';
 import MakePlaylist from './Components/MakePlaylist' 
 import Player from './Components/Player'
+import VirtualizedList from './Components/listRow'
+
+import { Container,Row,Col } from 'react-bootstrap';
+
 
 const App = () => {
     const dispatch = useDispatch();
@@ -24,8 +28,10 @@ const App = () => {
             <NavBar />
             <Route exact path ="/" render={()=>(
               <Fragment>
-                <Welcome name="Vtuber Music" />
-                <Player />
+                <Container>
+                  <Welcome name="Vtuber Music" />
+                  <Player />
+                </Container>
               </Fragment>
             )} />
             
