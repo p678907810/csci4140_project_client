@@ -12,6 +12,7 @@ import Contact from './Components/Contact'
 import NavBar from './Components/Navbar';
 import MakePlaylist from './Components/MakePlaylist' 
 import Player from './Components/Player'
+import AddVtuber from './Components/AddVtuber'
 import VirtualizedList from './Components/listRow'
 
 import { Container,Row,Col } from 'react-bootstrap';
@@ -37,7 +38,7 @@ const App = () => {
             
             <Switch>
                 <Route exact path="/aboutus" component={About} />
-                <Route exact path="/contactus" component={Contact} />
+                <Route exact path="/addVtuber" component={AddVtuber} />
                 <Route exact path="/makeplaylist" component={MakePlaylist} />
             </Switch>
             <Posts />

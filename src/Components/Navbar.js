@@ -10,8 +10,8 @@ const NavBar = () => {
         <Nav className="mr-auto">
             <LinkContainer to="/"><Nav.Link>Home</Nav.Link></LinkContainer>
             <LinkContainer to="/aboutus"><Nav.Link>About Us</Nav.Link></LinkContainer>
-            <LinkContainer to="/contactus"><Nav.Link>Contact</Nav.Link></LinkContainer>
-            <LinkContainer to="/makeplaylist"><Nav.Link>Make Playlist</Nav.Link></LinkContainer>
+            <LinkContainer to="/addVTuber"><Nav.Link>Add Vtuber</Nav.Link></LinkContainer>
+            <LinkContainer to="/makeplaylist"><Nav.Link>Make Song</Nav.Link></LinkContainer>
         </Nav>
         <Form inline>
         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
