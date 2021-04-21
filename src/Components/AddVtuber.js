@@ -1,6 +1,7 @@
 import React,{Fragment} from 'react';
 import {Button,Form,FormControl,Container,Row,Col} from 'react-bootstrap';
-import getYoutubeChannelId from 'get-youtube-channel-id'
+// import getYoutubeChannelId from 'get-youtube-channel-id'
+import VtuberForm from './Form/VtuberForm.js'
 const youtubeApiKey = 'AIzaSyCciLzhshIk8E8QFq4Jbb8qtQmIMdSdRcQ';
 class AddVtuber extends React.Component{
     constructor(props){
@@ -36,28 +37,29 @@ class AddVtuber extends React.Component{
     }
     render(){
     return (
-        <Container>
-        <Form>
-            <Form.Group controlId="formBasicVtuberName">
-                <Form.Label>Vtuber Name</Form.Label>
-                <Form.Control type="text" />
-            </Form.Group>
+        // <Container>
+        // <Form>
+        //     <Form.Group controlId="formBasicVtuberName">
+        //         <Form.Label>Vtuber Name</Form.Label>
+        //         <Form.Control type="text" />
+        //     </Form.Group>
 
-            <Form.Group controlId="formBasicVtuberId">
-                <Form.Label>Vtuber Id</Form.Label>
-                <Form.Control type="text" />
-            </Form.Group>
+        //     <Form.Group controlId="formBasicVtuberId">
+        //         <Form.Label>Vtuber Id</Form.Label>
+        //         <Form.Control type="text" />
+        //     </Form.Group>
 
-            <Form.Group controlId="formBasicChannelUrl">
-                <Form.Label>VTuber Channel Link</Form.Label>
-                <Form.Control type="text" placeholder="e.g. https://www.youtube.com/channel/UCoSrY_IQQVpmIRZ9Xf-y93g"/>
-            </Form.Group>
-            <img src={this.state.pic} width='300' height='300'/><br />
-            <Button variant="info" type="submit">
-                Add
-            </Button>
-        </Form>
-        </Container>
+        //     <Form.Group controlId="formBasicChannelUrl">
+        //         <Form.Label>VTuber Channel Link</Form.Label>
+        //         <Form.Control type="text" placeholder="e.g. https://www.youtube.com/channel/UCoSrY_IQQVpmIRZ9Xf-y93g"/>
+        //     </Form.Group>
+        //     <img src={this.state.pic} width='300' height='300'/><br />
+        //     <Button variant="info" type="submit">
+        //         Add
+        //     </Button>
+        // </Form>
+        // </Container>
+        <VtuberForm />
     )
     }
 }
