@@ -32,6 +32,8 @@ const App = () => {
                 <Container>
                   <Welcome name="Vtuber Music" />
                   <Player />
+                  <h1>Vtubers</h1>
+                  <Posts />
                 </Container>
               </Fragment>
             )} />
@@ -41,7 +43,6 @@ const App = () => {
                 <Route exact path="/addVtuber" component={AddVtuber} />
                 <Route exact path="/makeplaylist" component={MakePlaylist} />
             </Switch>
-            <Posts />
        </Fragment>
       </Router>
     );
