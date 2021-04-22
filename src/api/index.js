@@ -8,4 +8,5 @@ export const fetchVtubers = () => API.get('/vtubers');
 // export const createVtuber = (newVtuber) => axios.post(url, newVtuber);
 export const createVtuber = (newVtuber) => API.post('/vtubers', newVtuber);
 
+export const fetchSongs = () => API.get('/songs');
 export const createSong = (newSong) => API.post('/songs', newSong);

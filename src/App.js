@@ -4,10 +4,11 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 //import './App.css';
 import { useDispatch } from 'react-redux';
 import { getVtubers } from './actions/vtubers';
+import { getSongs } from './actions/songs';
 import Header from './Components/Header';
 import Welcome from './Components/Welcome';
-// import Posts from './Components/Posts';
 import Vtubers from './Components/Vtubers';
+import Explore from './Components/Explore';
 import About from './Components/About';
 import Contact from './Components/Contact'
 import NavBar from './Components/Navbar';
@@ -37,12 +38,13 @@ const App = () => {
               <Player />
               <h1>Vtubers</h1>
               <Vtubers setCurrentId={setCurrentId} />
+
             </Container>
           </Fragment>
         )} />
 
         <Switch>
-          <Route exact path="/aboutus" component={About} />
+          <Route exact path="/explore" component={Explore} />
           <Route exact path="/addVtuber" component={AddVtuber} />
           <Route exact path="/addSong" component={AddSong} />
         </Switch>

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { useDispatch } from 'react-redux';
-
+import { Grid, List, ListItem, ListItemText } from '@material-ui/core';
 const Post = ({ post }) => {
     const dispatch = useDispatch();
 

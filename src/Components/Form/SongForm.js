@@ -26,7 +26,6 @@ const SongForm = ({ currentId, setCurrentId }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-
         dispatch(createSong(songData));
         history.push("/");
         clear();

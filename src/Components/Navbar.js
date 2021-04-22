@@ -9,7 +9,7 @@ const NavBar = () => {
         <Navbar.Brand>VMusic</Navbar.Brand>
         <Nav className="mr-auto">
             <LinkContainer to="/"><Nav.Link>Home</Nav.Link></LinkContainer>
-            <LinkContainer to="/aboutus"><Nav.Link>About Us</Nav.Link></LinkContainer>
+            <LinkContainer to="/explore"><Nav.Link>Explore</Nav.Link></LinkContainer>
             <LinkContainer to="/addVTuber"><Nav.Link>Add Vtuber</Nav.Link></LinkContainer>
             <LinkContainer to="/addSong"><Nav.Link>Add Song</Nav.Link></LinkContainer>
         </Nav>
