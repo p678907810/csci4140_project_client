@@ -13,10 +13,6 @@ const NavBar = () => {
             <LinkContainer to="/addVTuber"><Nav.Link>Add Vtuber</Nav.Link></LinkContainer>
             <LinkContainer to="/addSong"><Nav.Link>Add Song</Nav.Link></LinkContainer>
         </Nav>
-        <Form inline>
-        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-        <Button variant="outline-info">Search</Button>
-        </Form>
         
     </Navbar>
     </nav>  

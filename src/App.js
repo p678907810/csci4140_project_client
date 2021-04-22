@@ -34,8 +34,6 @@ const App = () => {
         <Route exact path="/" render={() => (
           <Fragment>
             <Container>
-              <Welcome name="Vtuber Music" />
-              <Player />
               <h1>Vtubers</h1>
               <Vtubers setCurrentId={setCurrentId} />
 
