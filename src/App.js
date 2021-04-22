@@ -9,6 +9,7 @@ import Header from './Components/Header';
 import Welcome from './Components/Welcome';
 import Vtubers from './Components/Vtubers';
 import Explore from './Components/Explore';
+import VtuberList from './Components/VtuberList'
 import About from './Components/About';
 import Contact from './Components/Contact'
 import NavBar from './Components/Navbar';
@@ -42,6 +43,7 @@ const App = () => {
         )} />
 
         <Switch>
+          <Route path="/vtuberList/:vtuber" component={VtuberList} />
           <Route exact path="/explore" component={Explore} />
           <Route exact path="/addVtuber" component={AddVtuber} />
           <Route exact path="/addSong" component={AddSong} />

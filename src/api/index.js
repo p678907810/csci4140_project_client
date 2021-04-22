@@ -9,4 +9,5 @@ export const fetchVtubers = () => API.get('/vtubers');
 export const createVtuber = (newVtuber) => API.post('/vtubers', newVtuber);
 
 export const fetchSongs = () => API.get('/songs');
+export const fetchSongsByVtuber = (vtuber) => API.get(`/songs/${vtuber}`);
 export const createSong = (newSong) => API.post('/songs', newSong);

@@ -21,16 +21,12 @@ function IFramePlayer({ songs }) {
     const vtuber = e.currentTarget.dataset.vtuber;
     const start = e.currentTarget.dataset.start;
     const end = e.currentTarget.dataset.end;
-    console.log(sourceid);
-    console.log(title);
-    console.log(vtuber);
-    console.log(start);
-    console.log(end);
     setSong({ title: title, vtuber: vtuber, start: start, end: end, sourceId: sourceid });
     setOpts({
       playerVars: {
         start: start,
-        end: end
+        end: end,
+        autoplay: 1
       },
     })
     // console.log(song.sourceid);
@@ -40,13 +36,7 @@ function IFramePlayer({ songs }) {
   return (
     <Row>
       <Col>
-        {/* {player.map((player) => (
-          <ListItem button data-sourceid={song.sourceId} data-title={song.title} data-vtuber={song.vtuber} data-start={song.start} data-end={song.end} onClick={addSongToPlayer}>
-            <Song song={song} />
-          </ListItem>
-        ))} */}
-
-        <YouTube videoId={song.sourceId} opts={opts}/>
+        <YouTube videoId={song.sourceId} opts={opts} />
       </Col>
       <Col>
         <List>

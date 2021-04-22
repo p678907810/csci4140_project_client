@@ -8,7 +8,7 @@ const Vtuber = ({ vtuber }) => {
 
     return (
         <Fragment>
-            <button onClick={()=>{history.push('/'+vtuber._id)}}><img src={vtuber.avatar} width="200" height="200"/></button>
+            <button onClick={()=>{history.push('/vtuberList/'+vtuber._id)}}><img src={vtuber.avatar} width="200" height="200"/></button>
             <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>{vtuber.name}</div>
         </Fragment>
     );
