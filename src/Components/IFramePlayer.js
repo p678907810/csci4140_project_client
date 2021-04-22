@@ -7,14 +7,13 @@ import YouTube from 'react-youtube';
 function IFramePlayer({ songs }) {
   const [player, setPlayer] = useState([]);
   const [song, setSong] = useState({ title: '', vtuber: '', start: '', end: '', sourceId: '' });
-  // const [opts, setOpts] = useState({
-  //   height: '390',
-  //   width: '640',
-  //   playerVars: {
-  //     // https://developers.google.com/youtube/player_parameters
-  //     autoplay: 1,
-  //   },
-  // });
+  const [opts, setOpts] = useState({
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      start: 0,
+      end: 1
+    },
+  });
 
   function addSongToPlayer(e) {
     const sourceid = e.currentTarget.dataset.sourceid;
@@ -28,6 +27,12 @@ function IFramePlayer({ songs }) {
     console.log(start);
     console.log(end);
     setSong({ title: title, vtuber: vtuber, start: start, end: end, sourceId: sourceid });
+    setOpts({
+      playerVars: {
+        start: start,
+        end: end
+      },
+    })
     // console.log(song.sourceid);
     // setPlayer(player => [...player, sourceid]);
   }
@@ -41,7 +46,7 @@ function IFramePlayer({ songs }) {
           </ListItem>
         ))} */}
 
-        <YouTube videoId={song.sourceId} />
+        <YouTube videoId={song.sourceId} opts={opts}/>
       </Col>
       <Col>
         <List>
@@ -54,20 +59,6 @@ function IFramePlayer({ songs }) {
         </List>
       </Col>
     </Row>
-    // <div className="app">
-    //   <div className="songs">
-    //     <button value="MacBook Pro" data-title="A1" onClick={addItemToPlayer}>💻 MacBook Pro</button>
-    //     <button value="iPhone XS" data-title="A2" onClick={addItemToPlayer}>📱iPhone XS</button>
-    //     <button value="Gem" data-title="A3" onClick={addItemToPlayer}>💎 Gem</button>
-    //     <button value="Teddy Bear" data-title="A4" onClick={addItemToPlayer}>🧸 Teddy Bear</button>
-    //   </div>
-    //   <div className="cart">
-    //     🛒Cart
-    //     <ul>
-    //       {player.map(item => <li key={item}>{item}</li>)}
-    //     </ul>
-    //   </div>
-    // </div>
   );
 }
 
