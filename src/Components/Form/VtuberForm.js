@@ -51,9 +51,9 @@ const VtuberForm = ({ currentId, setCurrentId }) => {
         <Paper className={classes.paper}>
             <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
                 <Typography variant="h6">{currentId ? `Editing "${vtuber.title}"` : 'Creating Vtuber'}</Typography>
-                <TextField name="name" variant="outlined" label="Name" fullWidth value={vtuberData.name} onChange={(e) => setVtuberData({ ...vtuberData, name: e.target.value })} />
-                <TextField name="id" variant="outlined" label="Vtuber Id" fullWidth value={vtuberData._id} onChange={(e) => setVtuberData({ ...vtuberData, _id: e.target.value })} />
-                <TextField name="url" variant="outlined" label="Channel URL" fullWidth value={vtuberData.channelId} onChange={(e) => setVtuberData({ ...vtuberData, channelId: e.target.value })} />
+                <TextField name="name" variant="outlined" label="Name" placeholder="Hoshimachi Suisei" fullWidth value={vtuberData.name} onChange={(e) => setVtuberData({ ...vtuberData, name: e.target.value })} />
+                <TextField name="id" variant="outlined" label="Vtuber Id" placeholder="hoshimachi_suisei" fullWidth value={vtuberData._id} onChange={(e) => setVtuberData({ ...vtuberData, _id: e.target.value })} />
+                <TextField name="url" variant="outlined" label="Channel URL" placeholder="https://www.youtube.com/channel/vtuber-music" fullWidth value={vtuberData.channelId} onChange={(e) => setVtuberData({ ...vtuberData, channelId: e.target.value })} />
                 <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
                 <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>
             </form>

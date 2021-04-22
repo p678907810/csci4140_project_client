@@ -1,13 +1,3 @@
-// export default (vtubers = [],action) => {
-//     switch(action.type){
-//         case 'FETCH_ALL':
-//             return action.payload;
-//         case 'CREATE':
-//             return vtubers;
-//         default:
-//             return vtubers;
-//     }
-// }
 import { FETCH_ALL, CREATE, UPDATE, DELETE } from '../constants/actionTypes';
 
 export default (vtubers = [], action) => {

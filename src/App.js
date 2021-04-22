@@ -11,7 +11,8 @@ import Vtubers from './Components/Vtubers';
 import About from './Components/About';
 import Contact from './Components/Contact'
 import NavBar from './Components/Navbar';
-import MakePlaylist from './Components/MakePlaylist'
+// import MakePlaylist from './Components/MakePlaylist'
+import AddSong from './Components/AddSongForm'
 import Player from './Components/Player'
 import AddVtuber from './Components/AddVtuberForm'
 import VirtualizedList from './Components/listRow'
@@ -43,7 +44,7 @@ const App = () => {
         <Switch>
           <Route exact path="/aboutus" component={About} />
           <Route exact path="/addVtuber" component={AddVtuber} />
-          <Route exact path="/makeplaylist" component={MakePlaylist} />
+          <Route exact path="/addSong" component={AddSong} />
         </Switch>
       </Fragment>
     </Router>

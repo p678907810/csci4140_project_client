@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
 
-import posts from './posts';
+import songs from './songs';
 import vtubers from './vtubers';
 
 export default combineReducers({
-    vtubers 
+    vtubers,
+    songs
 });
