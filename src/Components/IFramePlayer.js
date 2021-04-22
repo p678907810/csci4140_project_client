@@ -7,14 +7,14 @@ import YouTube from 'react-youtube';
 function IFramePlayer({ songs }) {
   const [player, setPlayer] = useState([]);
   const [song, setSong] = useState({ title: '', vtuber: '', start: '', end: '', sourceId: '' });
-  const [opts, setOpts] = useState({
-    height: '390',
-    width: '640',
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
-    },
-  });
+  // const [opts, setOpts] = useState({
+  //   height: '390',
+  //   width: '640',
+  //   playerVars: {
+  //     // https://developers.google.com/youtube/player_parameters
+  //     autoplay: 1,
+  //   },
+  // });
 
   function addSongToPlayer(e) {
     const sourceid = e.currentTarget.dataset.sourceid;
@@ -41,8 +41,7 @@ function IFramePlayer({ songs }) {
           </ListItem>
         ))} */}
 
-        <YouTube videoId={song.sourceId} opts={
-        } />
+        <YouTube videoId={song.sourceId} />
       </Col>
       <Col>
         <List>
