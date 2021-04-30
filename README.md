@@ -10,6 +10,8 @@ To start our project after installing packages,
  
 ### `npm start`
 
+Both client side and server side need to start, so you need to run this command twice under this client folder and server side folder.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
